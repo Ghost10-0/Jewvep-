@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page title</title>
+    <link rel="stylesheet" href="ezek.css">
+</head>
+<body>
+    <header>
+    <div class="navbar">
+        <h1 class="logo">Jewvep Global <span>Logistics</span></h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#home" id="home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+                <li><a href="#contact" id="contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section class="hero">
+  <div class="hero-content">
+    <h1>Reliable Freight Forwarding, Anywhere You Ship</h1>
+    <p>Air, sea, and land logistics solutions built for your business</p>
+    <div class="hero-buttons">
+      <a href="#quote" class="btn-primary">Get a Quote</a>
+      <a href="#track" class="btn-secondary">Track Shipment</a>
+    </div>
+  </div>
+</section>
+<section class="about" id="about">
+    <div class="about-inner">
+        <div class="about-image">
+            <img src="GA.jpeg" alt="Freight documentation and customs clearance in progress">
+        </div>
+        <div class="about-content">
+            <div class="eyebrow"></div>
+            <h2>About Us</h2>
+            <p>Jewvep Global Logistics handles freight forwarding and customs clearance across air, sea, and land — built for businesses that can't afford to wait. We manage the full journey of your cargo: documentation, clearance, delivery, no unnecessary delays, no guesswork.</p>
+            <p>Behind every shipment is a business depending on it to arrive on time. That's not a promise we make. It's the standard we work to.</p>
+
+            <ul class="checklist">
+                <li>Air, Sea &amp; Land Freight</li>
+                <li>Customs Documentation &amp; Clearance</li>
+                <li>Door-to-Door Delivery</li>
+                <li>Real-Time Shipment Support</li>
+            </ul>
+
+            <div class="stats-row">
+                <div class="stat">
+                    <span class="num">500+</span>
+                    <span class="label">Shipments Cleared</span>
+                </div>
+                <div class="stat">
+                    <span class="num">15+</span>
+                    <span class="label">Countries Served</span>
+                </div>
+                <div class="stat">
+                    <span class="num">24/7</span>
+                    <span class="label">Support</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="services" id="services">
+    <div class="services-inner">
+        <div class="eyebrow"></div>
+        <h2>Our Services</h2>
+        <p class="services-intro">End-to-end logistics support, built around your cargo — not the other way around.</p>
+
+        <div class="services-grid">
+            <div class="service-card" style="background-image:url('AR.jpeg');">
+                <div class="service-card-content">
+                    <span></span>
+                    <h3>Air Freight</h3>
+                    <p>Fast, reliable international shipping for time-sensitive cargo.</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('SP.jpeg');">
+                <div class="service-card-content">
+                    <span></span>
+                    <h3>Sea Freight</h3>
+                    <p>Cost-effective shipping for bulk and large-volume shipments.</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('TK.jpeg');">
+                <div class="service-card-content">
+                    <span></span>
+                    <h3>Land Freight</h3>
+                    <p>Dependable regional and last-mile delivery, door to door.</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('WA.jpeg');">
+                <div class="service-card-content">
+                    <span></span>
+                    <h3>Warehousing</h3>
+                    <p>Secure short and long-term storage with organized inventory handling.</p>
+                </div>
+            </div>
+
+            <div class="service-card" style="background-image:url('PD.jpeg');">
+                <div class="service-card-content">
+                    <span></span>
+                    <h3>Customs Clearance</h3>
+                    <p>Documentation and compliance handled — so your cargo doesn't sit at the border.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+  const cards = document.querySelectorAll('.service-card');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in-view');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  cards.forEach(card => observer.observe(card));
+</script>
+</body>
+</html>
