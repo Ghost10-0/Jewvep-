@@ -115,88 +115,100 @@
 </section>
     <section class="quote" id="quote">
     <div class="quote-inner">
-        <div class="eyebrow"></div>
-        <h2>Get a Quote</h2>
-        <p class="quote-intro">Tell us about your shipment and we'll get back to you with a tailored quote.</p>
+        <div class="quote-info">
+            <div class="eyebrow"></div>
+            <h2>Get a Quote</h2>
+            <p>Tell us about your shipment and we'll get back to you with a tailored quote — no obligation, no hidden fees.</p>
+            <ul class="quote-perks">
+                <li>Response within 24 hours</li>
+                <li>Transparent, itemized pricing</li>
+                <li>Support across air, sea &amp; land freight</li>
+            </ul>
+        </div>
 
-        <form class="quote-form" action="https://formspree.io/f/xkolyjnn" method="POST">
+        <div class="quote-card">
+            <form class="quote-form" id="quoteForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
 
-            <div class="field-pair">
-                <div>
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div>
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-            </div>
+                <div id="formMessage" class="form-message"></div>
 
-            <div class="field-pair">
-                <div>
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
+                <div class="field-pair">
+                    <div>
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="method">Shipping Method</label>
-                    <select id="method" name="shipping_method" required>
-                        <option value="">Select...</option>
-                        <option value="Air Freight">Air Freight</option>
-                        <option value="Sea Freight">Sea Freight</option>
-                        <option value="Land Freight">Land Freight</option>
-                    </select>
-                </div>
-            </div>
 
-            <div class="field-pair">
-                <div>
-                    <label for="origin">Origin</label>
-                    <input type="text" id="origin" name="origin" placeholder="City, Country" required>
+                <div class="field-pair">
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+                    <div>
+                        <label for="method">Shipping Method</label>
+                        <select id="method" name="shipping_method" required>
+                            <option value="">Select...</option>
+                            <option value="Air Freight">Air Freight</option>
+                            <option value="Sea Freight">Sea Freight</option>
+                            <option value="Land Freight">Land Freight</option>
+                        </select>
+                    </div>
                 </div>
-                <div>
-                    <label for="destination">Destination</label>
-                    <input type="text" id="destination" name="destination" placeholder="City, Country" required>
-                </div>
-            </div>
 
-            <div class="field-pair">
-                <div>
-                    <label for="cargo_type">Cargo Type</label>
-                    <input type="text" id="cargo_type" name="cargo_type" placeholder="e.g. Electronics, Textiles">
+                <div class="field-pair">
+                    <div>
+                        <label for="origin">Origin</label>
+                        <input type="text" id="origin" name="origin" placeholder="City, Country" required>
+                    </div>
+                    <div>
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" name="destination" placeholder="City, Country" required>
+                    </div>
                 </div>
-                <div>
-                    <label for="weight">Weight (kg)</label>
-                    <input type="number" id="weight" name="weight_kg" min="0">
-                </div>
-            </div>
 
-            <div class="field-pair">
-                <div>
-                    <label for="containers">No. of Containers</label>
-                    <input type="number" id="containers" name="number_of_containers" min="1">
+                <div class="field-pair">
+                    <div>
+                        <label for="cargo_type">Cargo Type</label>
+                        <input type="text" id="cargo_type" name="cargo_type" placeholder="e.g. Electronics, Textiles">
+                    </div>
+                    <div>
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" name="weight_kg" min="0">
+                    </div>
                 </div>
-                <div>
-                    <label for="container_size">Container Size</label>
-                    <select id="container_size" name="container_size">
-                        <option value="">Select...</option>
-                        <option value="20ft">20ft</option>
-                        <option value="40ft">40ft</option>
-                        <option value="40ft HC">40ft High Cube</option>
-                        <option value="Not applicable">Not applicable</option>
-                    </select>
+
+                <div class="field-pair">
+                    <div>
+                        <label for="containers">No. of Containers</label>
+                        <input type="number" id="containers" name="number_of_containers" min="1">
+                    </div>
+                    <div>
+                        <label for="container_size">Container Size</label>
+                        <select id="container_size" name="container_size">
+                            <option value="">Select...</option>
+                            <option value="20ft">20ft</option>
+                            <option value="40ft">40ft</option>
+                            <option value="40ft HC">40ft High Cube</option>
+                            <option value="Not applicable">Not applicable</option>
+                        </select>
+                    </div>
                 </div>
-            </div>
 
-            <div>
-                <label for="message">Additional Details</label>
-                <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
-            </div>
+                <div>
+                    <label for="message">Additional Details</label>
+                    <textarea id="message" name="message" placeholder="Anything else we should know?"></textarea>
+                </div>
 
-            <button type="submit" class="submit-btn">Request Quote</button>
-        </form>
+                <button type="submit" class="submit-btn">Request Quote</button>
+            </form>
+        </div>
     </div>
     </section>
-<script>
+    <script>
+  // Service card scroll animation
   const cards = document.querySelectorAll('.service-card');
 
   const observer = new IntersectionObserver((entries) => {
@@ -211,6 +223,36 @@
   });
 
   cards.forEach(card => observer.observe(card));
-</script>
+
+  // Quote form submission (no page redirect)
+  const form = document.getElementById('quoteForm');
+  const messageBox = document.getElementById('formMessage');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(response => {
+      if (response.ok) {
+        messageBox.textContent = "Thanks! Your quote request has been sent — we'll get back to you within 24 hours.";
+        messageBox.className = 'form-message success';
+        form.reset();
+      } else {
+        messageBox.textContent = "Something went wrong. Please try again or contact us directly.";
+        messageBox.className = 'form-message error';
+      }
+    })
+    .catch(() => {
+      messageBox.textContent = "Something went wrong. Please check your connection and try again.";
+      messageBox.className = 'form-message error';
+    });
+  });
+    </script>
 </body>
 </html>
