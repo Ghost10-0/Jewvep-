@@ -134,23 +134,61 @@ html{
     scroll-margin-top: 20px;
 }
 
-.quote-inner { max-width: 700px; margin: 0 auto; }
+.quote-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 
-.quote-inner h2 {
+.quote-info { max-width: 500px; }
+
+.quote-info h2 {
     color: #1a1a1a;
     font-weight: 800;
     font-size: clamp(1.8rem, 6vw, 2.6rem);
     letter-spacing: -0.02em;
     text-transform: uppercase;
     line-height: 1.1;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
 }
 
-.quote-intro {
+.quote-info p {
     color: #4a4a4a;
     font-size: 1.05rem;
-    margin-bottom: 32px;
-    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+.quote-perks {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.quote-perks li {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    color: #1a1a1a;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.quote-perks li::before {
+    content: '✓';
+    color: #E8702A;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.quote-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 28px 24px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
 }
 
 .quote-form {
@@ -161,31 +199,33 @@ html{
 
 label {
     display: block;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     font-weight: 700;
     color: #1a1a1a;
     text-transform: uppercase;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     margin-bottom: 6px;
 }
 
 input, select, textarea {
     width: 100%;
     padding: 12px 14px;
-    border: 1px solid #d8d2c8;
-    border-radius: 4px;
+    border: 1.5px solid #e4e0d8;
+    border-radius: 6px;
     font-size: 0.95rem;
     font-family: inherit;
-    background: #ffffff;
+    background: #fafaf8;
     color: #1a1a1a;
+    transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: #E8702A;
+    background: #fff;
 }
 
-textarea { resize: vertical; min-height: 90px; }
+textarea { resize: vertical; min-height: 80px; }
 
 .field-pair {
     display: flex;
@@ -198,13 +238,43 @@ textarea { resize: vertical; min-height: 90px; }
     background: #E8702A;
     color: #fff;
     border: none;
-    padding: 14px 28px;
-    border-radius: 4px;
-    font-weight: 600;
+    padding: 15px 28px;
+    border-radius: 6px;
+    font-weight: 700;
     font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
     cursor: pointer;
-    margin-top: 8px;
-    align-self: flex-start;
+    margin-top: 6px;
+    transition: background 0.2s ease;
 }
 
 .submit-btn:hover { background: #cf6122; }
+
+.form-message {
+    display: none;
+    padding: 14px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.form-message.success {
+    display: block;
+    background: #e6f4ea;
+    color: #1e7a34;
+    border: 1px solid #b7dfc2;
+}
+
+.form-message.error {
+    display: block;
+    background: #fdecea;
+    color: #a12a2a;
+    border: 1px solid #f2c1bd;
+}
+
+@media (min-width: 768px) {
+    .quote-inner { flex-direction: row; gap: 60px; align-items: flex-start; }
+    .quote-info { flex: 1; position: sticky; top: 40px; }
+    .quote-card { flex: 1.3; }
+}
