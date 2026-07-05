@@ -127,3 +127,84 @@ html{
 @media (min-width: 1024px) {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
 }
+.quote {
+    background: #f4f1ec;
+    padding: 60px 24px 70px;
+    text-align: left;
+    scroll-margin-top: 20px;
+}
+
+.quote-inner { max-width: 700px; margin: 0 auto; }
+
+.quote-inner h2 {
+    color: #1a1a1a;
+    font-weight: 800;
+    font-size: clamp(1.8rem, 6vw, 2.6rem);
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.quote-intro {
+    color: #4a4a4a;
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+    max-width: 500px;
+}
+
+.quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    margin-bottom: 6px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d8d2c8;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    background: #ffffff;
+    color: #1a1a1a;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #E8702A;
+}
+
+textarea { resize: vertical; min-height: 90px; }
+
+.field-pair {
+    display: flex;
+    gap: 12px;
+}
+
+.field-pair > div { flex: 1; }
+
+.submit-btn {
+    background: #E8702A;
+    color: #fff;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+.submit-btn:hover { background: #cf6122; }
