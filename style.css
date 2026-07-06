@@ -504,3 +504,30 @@ footer {
     color: #999;
     cursor: pointer;
 }
+.btn-primary {
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: #cf6122;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-secondary:hover {
+    background: #fff;
+    color: #1a1a1a;
+    transform: translateY(-2px);
+}
+
+.service-card {
+    transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 16px 32px rgba(0,0,0,0.4);
+}
